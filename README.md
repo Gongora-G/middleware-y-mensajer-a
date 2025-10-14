@@ -35,18 +35,28 @@ Sistema simple de mensajería que demuestra conceptos de **middleware** y **brok
 
 ## ⚡ INSTALACIÓN SÚPER RÁPIDA
 
-### 🎯 Para PROBAR el concepto (1 computadora):
+### 🐍 **Requisitos:**
+- **Python 3.8+** → https://www.python.org/downloads/ 
+- ✅ Marcar "Add Python to PATH" durante instalación
+
+### 🎯 **Para PROBAR el concepto (1 computadora):**
 ```bash
+git clone https://github.com/Gongora-G/middleware-y-mensajer-a.git
+cd middleware-y-mensajer-a
 pip install redis
 python demo_chat.py  # ← Demo completo con explicaciones
 ```
 
-### 🌐 Para CHAT EN RED (2 computadoras):
+### 🌐 **Para CHAT EN RED (2 computadoras):**
 ```bash
+# Paso 1: Descargar
 git clone https://github.com/Gongora-G/middleware-y-mensajer-a.git
 cd middleware-y-mensajer-a  
+
+# Paso 2: Instalar dependencias
 pip install redis
-# Ver GUIA_PARA_COMPAÑERO.md para configuración de red
+
+# Paso 3: Configurar red (ver GUIA_PARA_COMPAÑERO.md)
 ```
 
 ---

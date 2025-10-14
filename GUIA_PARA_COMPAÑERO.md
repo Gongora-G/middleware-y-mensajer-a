@@ -16,21 +16,31 @@ Chatear entre **2 computadoras diferentes** usando **middleware** (Redis)
 
 ## ⚡ PASOS SÚPER RÁPIDOS
 
-### 📥 **1. DESCARGAR PROYECTO**
+### � **1. INSTALAR PYTHON (Si no lo tienes)**
+- Ir a: https://www.python.org/downloads/
+- Descargar Python 3.8 o superior
+- **¡IMPORTANTE!** ✅ Marcar "Add Python to PATH" durante la instalación
+
+### �📥 **2. DESCARGAR PROYECTO**
 ```bash
 git clone https://github.com/Gongora-G/middleware-y-mensajer-a.git
 cd middleware-y-mensajer-a
-pip install redis
 ```
 
-### 🔧 **2. CONFIGURAR (Solo Persona B)**
+### 📦 **3. INSTALAR DEPENDENCIAS**
+```bash
+pip install redis
+```
+*Si `pip` no funciona, intenta: `python -m pip install redis`*
+
+### 🔧 **4. CONFIGURAR (Solo Persona B)**
 Abrir `broker_red.py` y cambiar **2 líneas**:
 ```python
 REDIS_HOST = '192.168.0.XX'  # ← IP de la Persona A
 MODO_SERVIDOR = False        # ← Cambiar a False
 ```
 
-### 🚀 **3. EJECUTAR**
+### 🚀 **5. EJECUTAR**
 
 **Persona A (Servidor):**
 ```bash
