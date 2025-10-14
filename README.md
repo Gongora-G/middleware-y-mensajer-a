@@ -33,53 +33,47 @@ Sistema simple de mensajería que demuestra conceptos de **middleware** y **brok
 └── 👥 GUIA_PARA_COMPAÑERO.md # Guía para uso en red
 ```
 
-## ⚡ Instalación Rápida
+## ⚡ INSTALACIÓN SÚPER RÁPIDA
 
-### 1. Instalar Redis (usando Docker)
-```bash
-docker run -d -p 6380:6379 --name redis-chat redis:latest
-```
-
-### 2. Instalar dependencias de Python
+### 🎯 Para PROBAR el concepto (1 computadora):
 ```bash
 pip install redis
+python demo_chat.py  # ← Demo completo con explicaciones
 ```
 
-### 3. Probar el sistema básico
+### 🌐 Para CHAT EN RED (2 computadoras):
+```bash
+git clone https://github.com/Gongora-G/middleware-y-mensajer-a.git
+cd middleware-y-mensajer-a  
+pip install redis
+# Ver GUIA_PARA_COMPAÑERO.md para configuración de red
+```
+
+---
+
+## 🚀 MODOS DE USO
+
+### 🎮 **Modo 1: Demo Educativo** 
 ```bash
 python demo_chat.py
 ```
+✅ Perfecto para **explicar conceptos** en clase  
+✅ Muestra **paso a paso** cómo funciona el middleware
 
-## 🚀 Modos de Uso
-
-### 📱 Modo 1: Chat Local (Una computadora)
-Perfecto para entender los conceptos básicos:
-
+### 💻 **Modo 2: Chat Local**
 ```bash
-# Terminal 1: Escuchar mensajes
-python receiver.py
+python receiver.py  # Terminal 1: escuchar
+python sender.py    # Terminal 2: enviar
+```  
+✅ Entender **Producer/Consumer** básico
 
-# Terminal 2: Enviar mensajes  
-python sender.py
-```
-
-### 🌐 Modo 2: Chat en Red (Múltiples computadoras)
-Para comunicación entre computadoras diferentes:
-
+### 🌍 **Modo 3: Chat Distribuido** (¡LO MÁS GENIAL!)
 ```bash
-# Computadora 1 (Servidor): Ejecuta Redis
-docker run -d -p 6380:6379 --name redis-network redis:latest redis-server --bind 0.0.0.0 --protected-mode no
-
-# Computadora 2 (Cliente): Configura IP del servidor en broker_red.py
-python sender_red.py  # o receiver_red.py
+python receiver_red.py  # Persona A
+python sender_red.py    # Persona B (otra computadora)
 ```
-
-### 🎭 Modo 3: Demo Interactivo
-Demostración completa con explicaciones:
-
-```bash
-python demo_chat.py
-```
+✅ **Sistema distribuido REAL** entre computadoras  
+✅ Perfecto para **impresionar** en presentaciones
 
 ## 🔍 Conceptos Demostrados
 
